@@ -10,10 +10,10 @@ public class Pay
         double payRate_2 = 20.00;
         double payRate_3 = 22.00;
         
+        Scanner imp = new Scanner(System.in);
         System.out.print("How many hours did you work this week??");
         int hoursWorked = imp.nextInt();
-        
-        Scanner imp = new Scanner(System.in);   
+   
         System.out.print("What is your skill level?");
         int skill = imp.nextInt();
         
