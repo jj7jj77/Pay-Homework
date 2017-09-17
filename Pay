@@ -10,12 +10,13 @@ public class Pay
         double payRate_2 = 20.00;
         double payRate_3 = 22.00;
         
-        Scanner imp = new Scanner(System.in);
-        System.out.print("How many hours did you work this week??");
-        int hoursWorked = imp.nextInt();
-   
+        Scanner imp = new Scanner(System.in); 
         System.out.print("What is your skill level?");
         int skill = imp.nextInt();
+        
+        System.out.print("How many hours did you work this week??");
+        int hoursWorked = imp.nextInt();
+        
         
         //String medicalInsurance;
         double medical = 32.50;
@@ -24,7 +25,6 @@ public class Pay
         //String disabilityInsurance;
         double disability = 10.00;
        
-       /*System.out.println("You have a skill level of " + skill +
-                " you worked " + hoursWorked + " hours this week";*/
+       System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
         }
      }
