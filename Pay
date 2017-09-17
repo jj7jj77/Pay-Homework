@@ -10,15 +10,22 @@ public class Pay
         double payRate_2 = 20.00;
         double payRate_3 = 22.00;
         
+        
         //String medicalInsurance;
-        //String dentalInsurance;
+        double medical = 32.50;
+        
+        //String dentalInsurance; 
+        double dental = 20.00;
+        
         //String disabilityInsurance;
+         double disability = 10.00;
+        
+       
         //String retirementPlan;
         /*double insuranceCost = 0;
-        double medical = 32.50;
-        double dental = 20.00;
-        double disability = 10.00;*/
+       
         
+       
         Scanner imp = new Scanner(System.in);   
         System.out.print("What is your skill level?");
         int skill = imp.nextInt();
