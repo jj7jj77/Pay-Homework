@@ -4,10 +4,6 @@ public class Pay
 {
     public static void main(String[] args)
      {    
-        int skillLevel;
-        double overtimePay;
-        double regularPay;
-        int FullWeek = 40;
         double overtime_Rate = 1.5;
         
         double hourlyPay =0;
