@@ -1,0 +1,80 @@
+package JavaClassHomework2;
+import java.util.Scanner;
+public class Pay 
+{
+    public static void main(String[] args)
+     {    
+        int skillLevel;
+        double overtimePay;
+        double regularPay;
+        int FullWeek = 40;
+        double overtime_Rate = 1.5;
+        
+        double hourlyPay =0;
+        double payRate_1 = 17.00;
+        double payRate_2 = 20.00;
+        double payRate_3 = 22.00;
+        
+        //String medicalInsurance;
+        //String dentalInsurance;
+        //String disabilityInsurance;
+        //String retirementPlan;
+        /*double insuranceCost = 0;
+        double medical = 32.50;
+        double dental = 20.00;
+        double disability = 10.00;*/
+        
+        Scanner imp = new Scanner(System.in);   
+        System.out.print("What is your skill level?");
+        int skill = imp.nextInt();
+        
+        System.out.print("How many hours did you work this week??");
+        int hoursWorked = imp.nextInt();
+                
+        System.out.print("Would you like medical insurance?");
+        int medicalInsurance = imp.nextInt();
+        System.out.println("0 for no, 1 for yes");
+        int i = imp.nextInt();
+        
+        /*System.out.print("Would you like dental insurance?");
+        int dentalInsurance = imp.nextInt();
+        
+        System.out.print("Would you like disability insurance?");
+        int disabilityInsurance = imp.nextInt();*/
+        
+        if(skill==1)
+        {
+            hourlyPay = payRate_1;
+            regularPay = hourlyPay * FullWeek;
+            overtimePay = (hoursWorked - FullWeek) * overtime_Rate * hourlyPay;
+        }
+        else if(skill==2)
+        {
+            regularPay = (hoursWorked) * hourlyPay;
+            overtimePay = 0.00;
+        }
+        if (skill==3)
+        {
+            hourlyPay = payRate_1;
+            regularPay = hourlyPay * FullWeek;
+            overtimePay = (hoursWorked - FullWeek) * overtime_Rate * hourlyPay;
+        }
+        else if (skill==2)
+        {
+            regularPay = (hoursWorked) * hourlyPay;
+            overtimePay = 0.00;
+        }
+        else if (medicalInsurance==0|| medicalInsurance==1)
+        {
+          if (i=1)   
+          {
+              System.out.println("your weeklycost for MedI is 32.50")
+          }
+        }
+        /*System.out.println("You have a skill level of " + skill +
+                " you worked " + hoursWorked + " hours this week at " 
+                + hourlyPay + " per an hour. Your regular pay is "+ regularPay + 
+                " for the week and your overtime pay is " + overtimePay + 
+                " for the week. Your total pay is " + (regularPay + overtimePay));*/
+        }
+     }
