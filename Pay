@@ -6,32 +6,33 @@ public class Pay
      {    
         double overtime_Rate = 1.5;
         
-        double payRate_1 = 17.00;
-        double payRate_2 = 20.00;
-        double payRate_3 = 22.00;
-        
         Scanner imp = new Scanner(System.in); 
         System.out.print("What is your skill level?");
         int skill = imp.nextInt();
         
-        System.out.print("How many hours did you work this week??");
+        System.out.print("How many hours did you work this week?");
         int hoursWorked = imp.nextInt();
         
-         //= payrate  * skill;
         if (skill==1)
         {
-            payRate_1 = 17;
+            payRate = 17;
         }
-        elseif (skill==2)
+        else if (skill==2)
         {
-            payRate_2 =20;
+            payRate =20;
         }
-        elseif (skill==3)
+        else if (skill==3)
         {
-            payRate_3 =22;
+            payRate =22;
         }
         
-   
+           double wages = payrate * hoursWorked;
+           double regularPay = payrate * 40;
+           double overtimePay = payrate * (hoursWorked - 40); 
+        if hoursWorked<=40
+        {
+            double overtimePay = 0;
+        }
         //String medicalInsurance;
         double medical = 32.50;
         //String dentalInsurance; 
@@ -40,5 +41,7 @@ public class Pay
         double disability = 10.00;
        
        System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
+       System.out.println("Your pay rate is" + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
+       System.out.println("Your overtimepay is " + overtimePay);
         }
      }
