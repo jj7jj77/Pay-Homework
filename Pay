@@ -4,8 +4,7 @@ public class Pay
 {
     public static void main(String[] args)
      {    
-        double overtime_Rate = 1.5;
-        
+        double overtimePay = 1.5;
         Scanner imp = new Scanner(System.in); 
         System.out.print("What is your skill level?");
         int skill = imp.nextInt();
@@ -25,11 +24,12 @@ public class Pay
         {
             payRate =22;
         }
-        
-           double wages = payrate * hoursWorked;
-           double regularPay = payrate * 40;
-           double overtimePay = payrate * (hoursWorked - 40); 
-        if hoursWorked<=40
+            
+        wages = payRate * hoursWorked;
+        regularPay = payRate * 40;
+        overtimePay = payRate * (hoursWorked - 40); 
+           
+        if hoursWorked <= 40
         {
             double overtimePay = 0;
         }
