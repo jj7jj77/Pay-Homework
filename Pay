@@ -42,9 +42,9 @@ public class Pay
         double dental = 20.00;
         double disability = 10.00;
         double totalDeductions = medical + dental + disability;
-        
-        System.out.print("Choose an insurance");
-        int choice = imp.nextInt();
+        double CostofDeduction = medical - totalPay;
+        double CostofDeduction = dental - totalPay;
+        double CostofDeduction = disability - totalPay;
         
         System.out.print("Want medical insurance?");
         int m = imp.nextInt();
@@ -54,41 +54,16 @@ public class Pay
         
         System.out.print("Want disability insurance?");
         int db = imp.nextInt();
-        
-        switch(choice)
-        {
-            case 1: System.out.print("You want medical insurance? 0 for no, 1 for yes");
-        if (m ==1)
-        {
-           System.out.println("yes");
-        }
-        else
-        {
-            System.out.println("no");
-        }
-        break;
-            case 2: System.out.print("You want dental insurance? 0 for no, 1 for yes");
-        if (d ==1)
-        {
-           System.out.println("yes");
-        }
-        else
-        {
-            System.out.println("no");
-        }
-        break;
-            case 3: System.out.print("You want disability insurance? 0 for no, 1 for yes");
-        if (db ==1)
-        {
-           System.out.println("yes");
-        }
-        else
-        {
-            System.out.println("no");
-        }
-        break;
-        }
        
+       if (medical == 1)
+       {
+           deduction=medical;
+       }
+       else
+        {
+           System.out.print("no medical insurance");
+        }      
+          
 
         
         //if (skill==2 ||skill==3)
