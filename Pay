@@ -24,6 +24,7 @@ public class Pay
         {
             payRate =22;
         }
+        
         int wages = (payRate * hoursWorked);
         int regularPay = (payRate * 40);
         int overtimeHours = (hoursWorked - 40);
@@ -33,15 +34,54 @@ public class Pay
         {
             overtimePay = 0;
         }
-        //String medicalInsurance;
+
+        double totalPay =(regularPay+ overtimePay);
+        
+        
         double medical = 32.50;
-        //String dentalInsurance; 
         double dental = 20.00;
-        //String disabilityInsurance;
         double disability = 10.00;
+        
+        //Select insurance? as system out?
+        System.out.print("Want medical insurance?");
+        int medical = imp.nextInt();
+
+        System.out.print("Want dental insurance?");
+        int dental = imp.nextInt();
+        
+        System.out.print("Want disability insurance?");
+        int disability = imp.nextInt();
+        
+       
+        
+        double deductions = 0;
+        
+        if (medical ==1)
+        {
+            deductions = medical;
+        }
+        else if (dental ==2)
+        {
+            deductions = dental;
+        }
+        else if (disability ==3)
+        {
+            deductions = disability;
+        }
+        
+        
+        
+        
+        
+        //if (skill==2 ||skill==3)
+       
+        
+        
        
        System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
        System.out.println("Your pay rate is" + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
        System.out.println("Your overtimepay is " + overtimePay);
-        }
+       System.out.println("Your totalPay is " + totalPay);
+       System.out.println("Your total deductions are " + deductions);
+      }
      }
