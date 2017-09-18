@@ -29,7 +29,7 @@ public class Pay
         int regularPay = (payRate * 40);
         int overtimePay = (payRate * (hoursWorked - 40));
            
-        if hoursWorked <= 40
+        if (hoursWorked <= 40)
         {
             double overtimePay = 0;
         }
