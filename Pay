@@ -17,6 +17,7 @@ public class Pay
         System.out.print("How many hours did you work this week??");
         int hoursWorked = imp.nextInt();
         
+        double profit_per_Adult_Meal = AdultMealprice - cost_to_produce_Adult_Meal;
         
         //String medicalInsurance;
         double medical = 32.50;
