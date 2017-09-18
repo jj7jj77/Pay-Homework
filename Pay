@@ -41,42 +41,58 @@ public class Pay
         double medical = 32.50;
         double dental = 20.00;
         double disability = 10.00;
-        
-        //Select insurance? as system out?
-        System.out.print("Want medical insurance?");
-        int medical = imp.nextInt();
-
-        System.out.print("Want dental insurance?");
-        int dental = imp.nextInt();
-        
-        System.out.print("Want disability insurance?");
-        int disability = imp.nextInt();
-        
-       
-        
         double deductions = 0;
         
-        if (medical ==1)
+        System.out.print("Choose an insurance");
+        int choice = imp.nextInt();
+        
+        System.out.print("Want medical insurance?");
+        int m = imp.nextInt();
+
+        System.out.print("Want dental insurance?");
+        int d = imp.nextInt();
+        
+        System.out.print("Want disability insurance?");
+        int db = imp.nextInt();
+        
+        switch(choice)
         {
-            deductions = medical;
-        }
-        else if (dental ==2)
+            case 1: System.out.print("You want medical insurance? 0 for no, 1 for yes");
+        if (m ==1)
         {
-            deductions = dental;
+           System.out.println("yes");
         }
-        else if (disability ==3)
+        else
         {
-            deductions = disability;
+            System.out.println("no");
         }
-        
-        
-        
-        
+        break;
+            case 2: System.out.print("You want dental insurance? 0 for no, 1 for yes");
+        if (d ==1)
+        {
+           System.out.println("yes");
+        }
+        else
+        {
+            System.out.println("no");
+        }
+        break;
+            case 3: System.out.print("You want disability insurance? 0 for no, 1 for yes");
+        if (db ==1)
+        {
+           System.out.println("yes");
+        }
+        else
+        {
+            System.out.println("no");
+        }
+        break;
+        }
+      
         
         //if (skill==2 ||skill==3)
        
-        
-        
+
        
        System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
        System.out.println("Your pay rate is" + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
