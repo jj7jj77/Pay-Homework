@@ -5,9 +5,7 @@ public class Pay
     public static void main(String[] args)
      {    
         double overtimePay = 1.5;
-        int payRate =17;
-        int payRate = 20;
-        int payRate =22;
+        int payRate =0;
         Scanner imp = new Scanner(System.in); 
         System.out.print("What is your skill level?");
         int skill = imp.nextInt();
