@@ -25,9 +25,9 @@ public class Pay
             payRate =22;
         }
             
-        wages = payRate * hoursWorked;
-        regularPay = payRate * 40;
-        overtimePay = payRate * (hoursWorked - 40); 
+        int wages = (payRate * hoursWorked);
+        int regularPay = (payRate * 40);
+        int overtimePay = (payRate * (hoursWorked - 40)); 
            
         if hoursWorked <= 40
         {
