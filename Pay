@@ -17,8 +17,20 @@ public class Pay
         System.out.print("How many hours did you work this week??");
         int hoursWorked = imp.nextInt();
         
-        double profit_per_Adult_Meal = AdultMealprice - cost_to_produce_Adult_Meal;
-        
+         = payrate  * skill;
+        if (skill==1)
+        {
+            payRate = 17;
+        }
+        elseif (skill==2)
+        {
+            payRate =20;
+        }
+        elseif (skill==3)
+        {
+            payRate =22;
+        }
+          
         //String medicalInsurance;
         double medical = 32.50;
         //String dentalInsurance; 
