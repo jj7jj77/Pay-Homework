@@ -41,7 +41,7 @@ public class Pay
         double medical = 32.50;
         double dental = 20.00;
         double disability = 10.00;
-        double deductions = 0;
+        double totalDeductions = medical + dental + disability;
         
         System.out.print("Choose an insurance");
         int choice = imp.nextInt();
@@ -88,7 +88,8 @@ public class Pay
         }
         break;
         }
-      
+       
+
         
         //if (skill==2 ||skill==3)
        
@@ -98,6 +99,6 @@ public class Pay
        System.out.println("Your pay rate is" + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
        System.out.println("Your overtimepay is " + overtimePay);
        System.out.println("Your totalPay is " + totalPay);
-       System.out.println("Your total deductions are " + deductions);
+       System.out.println("Your total deductions are $" + totalDeductions);
       }
      }
