@@ -41,33 +41,45 @@ public class Pay
         double medical = 32.50;
         double dental = 20.00;
         double disability = 10.00;
-        double totalDeductions = medical + dental + disability;
-        double CostofDeduction = medical - totalPay;
-        double CostofDeduction = dental - totalPay;
-        double CostofDeduction = disability - totalPay;
-        
+               
         System.out.print("Want medical insurance?");
         int m = imp.nextInt();
-
         System.out.print("Want dental insurance?");
         int d = imp.nextInt();
-        
         System.out.print("Want disability insurance?");
         int db = imp.nextInt();
        
-       if (medical == 1)
+       if (medical == yes)
        {
-           deduction=medical;
+           medical=32.50;
        }
        else
         {
-           System.out.print("no medical insurance");
+           medical =0;\
+        }      
+       
+       TotalCostofDeductions = medical + dental + disability;
+       netPay = totalPay -TotalCostofDeductions;
+       
+       
+       if (dental == 20.00)
+       {
+           CostofDeductions = dental- totalPay;
+       }
+       else
+        {
+           System.out.print("no dental insurance");
         }      
           
-
-        
-        //if (skill==2 ||skill==3)
-       
+       if (disability == 10.00)
+       {
+           CostofDeductions = disability- totalPay;
+       }
+       else
+        {
+           System.out.print("no disability insurance");
+        }      
+          
 
        
        System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
