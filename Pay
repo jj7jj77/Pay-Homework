@@ -17,7 +17,7 @@ public class Pay
         System.out.print("How many hours did you work this week?");
         //initialize hours worked variable through input
         int hoursWorked = imp.nextInt();
-        int hoursMade = hoursWorked
+        int hoursMade = hoursWorked;
             if (hoursMade>=40)
                 {
                 hoursMade = 40;
@@ -122,7 +122,7 @@ public class Pay
        //Print outs for all outputs
        System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
        System.out.println("Your pay rate is " + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
-       System.out.println("Your earned " + wages");       
+       System.out.println("You earned " + wages);       
        System.out.println("Your overtimepay is " + overtimePay);
        System.out.println("Your Total Payment is " + totalPay);
        System.out.println("Your total deductions are $ " + totalDeductions);
