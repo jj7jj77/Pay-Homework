@@ -41,7 +41,7 @@ public class Pay
         int overtimeHours = (hoursWorked - 40);
         
         // calculate the overtime hour rate
-        int overTimePayRate = (payRate*1.5)
+        int overTimePayRate = (payRate*1.5);
         
         // initialize the overtime pay as a function of extra hours and payrate *1.5
         int overtimePay = (overTimePayRate * overtimeHours);
@@ -104,7 +104,7 @@ public class Pay
         double netPay = totalPay-totalDeductions;
             
             //for negative hours worked an error and kick out of the program are requested as part of the design
-            if (netPay =< 0)
+            if (netPay <= 0)
                 {
                 System.out.print("Your deductions exceed the gross pay, please work more hours...");
                 return;
