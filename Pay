@@ -58,7 +58,7 @@ public class Pay
                 }
         //validate total payment given to employee
         double totalPay =(wages+ overtimePay);
-        
+        int totalDeductions=0;
         double netPay= totalPay;
             //Insurance only applies to skill levels 2 and 3
             if (skill == 2 || skill == 3)
@@ -107,7 +107,7 @@ public class Pay
                         disability=0;
                         }      
                 //calculating total deductions  as the addition of agreed to insurances
-                double totalDeductions = medical + dental + disability;
+                totalDeductions = medical + dental + disability;
         
                 //calculating net pay as a function of total pay and total deductions
                 netPay = totalPay - totalDeductions;
@@ -129,10 +129,7 @@ public class Pay
        System.out.println("You earned " + wages);       
        System.out.println("Your overtimepay is " + overtimePay);
        System.out.println("Your Total Payment is " + totalPay);
-       if (skill == 2 || skill == 3)
-       {
        System.out.println("Your total deductions are $ " + totalDeductions);
-       }
        System.out.println("Your Net Payment is " + netPay);
       }
      }
