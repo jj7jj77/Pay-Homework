@@ -59,7 +59,7 @@ public class Pay
         //validate total payment given to employee
         double totalPay =(wages+ overtimePay);
         
-        double netpay= totalPay;
+        double netPay= totalPay;
             //Insurance only applies to skill levels 2 and 3
             if (skill == 2 || skill == 3)
             {
