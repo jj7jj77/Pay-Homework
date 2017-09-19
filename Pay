@@ -59,7 +59,7 @@ public class Pay
         //validate total payment given to employee
         double totalPay =(wages+ overtimePay);
             //Insurance only applies to skill levels 2 and 3
-            if (skill!=1)
+            if (skill == 2 || skill == 3)
             {
                 //initializing cost of insurance
                 //double medical = 32.50;
@@ -108,7 +108,7 @@ public class Pay
                 double totalDeductions = medical + dental + disability;
         
                 //calculating net pay as a function of total pay and total deductions
-                double netPay = totalPay-totalDeductions;
+                double netPay = totalPay - totalDeductions;
             
                     //for negative hours worked an error and kick out of the program are requested as part of the design
                     if (netPay <= 0)
