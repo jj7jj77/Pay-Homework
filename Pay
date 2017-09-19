@@ -41,10 +41,10 @@ public class Pay
         int overtimeHours = (hoursWorked - 40);
         
         // calculate the overtime hour rate
-        int overTimePayRate = (payRate*1.5);
+        double overTimePayRate = (payRate*1.5);
         
         // initialize the overtime pay as a function of extra hours and payrate *1.5
-        int overtimePay = (overTimePayRate * overtimeHours);
+        double overtimePay = (overTimePayRate * overtimeHours);
         
         //validating the hours to accomadate possible pay scenario
             if (hoursWorked <= 40)
@@ -55,15 +55,15 @@ public class Pay
         double totalPay =(regularPay+ overtimePay);
 
         //initializing cost of insurance
-        double medical = 32.50;
-        double dental = 20.00;
-        double disability = 10.00;
+        //double medical = 32.50;
+        //double dental = 20.00;
+        //double disability = 10.00;
         
         //Requesting case yes/no for medical insurance zeroing if none
-        System.out.print("Want medical insurance? (yes/no)");
-        int medical = imp.nextInt();
+        System.out.print("Want medical insurance? (1 for yes/0 for no)");
+        double medical = imp.nextInt();
 
-            if (medical == yes)
+            if (medical == 1)
                 {
                 medical=32.50;
                 }
@@ -73,10 +73,10 @@ public class Pay
                 }     
                 
         //Requesting case yes/no for dental insurance zeroing if none
-        System.out.print("Want dental insurance? (yes/no)");
-        int dental = imp.nextInt();
+        System.out.print("Want dental insurance? (1 for yes/0 for no)");
+        double dental = imp.nextInt();
         
-            if (dental == yes)
+            if (dental == 1)
                 {
                 dental=20.00;
                 }
@@ -86,10 +86,10 @@ public class Pay
                 }    
                 
         //Requesting case yes/no for disability insurance zeroing if none    
-        System.out.print("Want disability insurance? (yes/no)");
-        int disability = imp.nextInt();
+        System.out.print("Want disability insurance? (1 for yes/0 for no)");
+        double disability = imp.nextInt();
         
-            if (disability == yes)
+            if (disability == 1)
                 {
                 disability=10.00;
                 }
@@ -116,10 +116,10 @@ public class Pay
        
        //Print outs for all outputs
        System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
-       System.out.println("Your pay rate is" + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
+       System.out.println("Your pay rate is " + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
        System.out.println("Your overtimepay is " + overtimePay);
        System.out.println("Your Total Payment is " + totalPay);
-       System.out.println("Your total deductions are $" + totalDeductions);
+       System.out.println("Your total deductions are $ " + totalDeductions);
        System.out.println("Your Net Payment is " + netPay);
       }
      }
