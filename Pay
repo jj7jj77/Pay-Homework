@@ -86,7 +86,7 @@ public class Pay
                 }    
                 
         //Requesting case yes/no for disability insurance zeroing if none    
-        System.out.print("Want disability insurance?" (yes/no));
+        System.out.print("Want disability insurance? (yes/no)");
         int disability = imp.nextInt();
         
             if (disability == yes)
