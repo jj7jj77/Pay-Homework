@@ -58,67 +58,69 @@ public class Pay
                 }
         //validate total payment given to employee
         double totalPay =(wages+ overtimePay);
+            //Insurance only applies to skill levels 2 and 3
+            if (skill!=1)
+            {
+                //initializing cost of insurance
+                //double medical = 32.50;
+                //double dental = 20.00;
+                //double disability = 10.00;
+        
+                //Requesting case yes/no for medical insurance zeroing if none
+                System.out.print("Want medical insurance? (1 for yes/0 for no)");
+                double medical = imp.nextInt();
 
-        //initializing cost of insurance
-        //double medical = 32.50;
-        //double dental = 20.00;
-        //double disability = 10.00;
-        
-        //Requesting case yes/no for medical insurance zeroing if none
-        System.out.print("Want medical insurance? (1 for yes/0 for no)");
-        double medical = imp.nextInt();
-
-            if (medical == 1)
-                {
-                medical=32.50;
-                }
-            else
-                {
-                medical =0;
-                }     
+                    if (medical == 1)
+                        {
+                        medical=32.50;
+                        }
+                    else
+                        {
+                        medical =0;
+                        }     
                 
-        //Requesting case yes/no for dental insurance zeroing if none
-        System.out.print("Want dental insurance? (1 for yes/0 for no)");
-        double dental = imp.nextInt();
+                //Requesting case yes/no for dental insurance zeroing if none
+                System.out.print("Want dental insurance? (1 for yes/0 for no)");
+                double dental = imp.nextInt();
         
-            if (dental == 1)
-                {
-                dental=20.00;
-                }
-            else
-                {
-                dental=0;
-                }    
+                    if (dental == 1)
+                        {
+                        dental=20.00;
+                        }
+                    else
+                        {
+                        dental=0;
+                        }    
                 
-        //Requesting case yes/no for disability insurance zeroing if none    
-        System.out.print("Want disability insurance? (1 for yes/0 for no)");
-        double disability = imp.nextInt();
+                //Requesting case yes/no for disability insurance zeroing if none    
+                System.out.print("Want disability insurance? (1 for yes/0 for no)");
+                double disability = imp.nextInt();
         
-            if (disability == 1)
-                {
-                disability=10.00;
-                }
-            else
-                {   
-                disability=0;
-                }      
-        //calculating total deductions  as the addition of agreed to insurances
-        double totalDeductions = medical + dental + disability;
+                    if (disability == 1)
+                        {
+                        disability=10.00;
+                        }
+                    else
+                        {   
+                        disability=0;
+                        }      
+                //calculating total deductions  as the addition of agreed to insurances
+                double totalDeductions = medical + dental + disability;
         
-        //calculating net pay as a function of total pay and total deductions
-        double netPay = totalPay-totalDeductions;
+                //calculating net pay as a function of total pay and total deductions
+                double netPay = totalPay-totalDeductions;
             
-            //for negative hours worked an error and kick out of the program are requested as part of the design
-            if (netPay <= 0)
-                {
-                System.out.print("Your deductions exceed the gross pay, please work more hours...");
-                return;
-                }
-            else
-                {
-                System.out.print("THank you for contributing to your insurance");
-                }
-       
+                    //for negative hours worked an error and kick out of the program are requested as part of the design
+                    if (netPay <= 0)
+                        {
+                        System.out.print("Your deductions exceed the gross pay, please work more hours...");
+                        return;
+                        }
+                    else
+                        {
+                        System.out.print("THank you for contributing to your insurance");
+                        }
+            }
        //Print outs for all outputs
        System.out.println("You have a skill level of " + skill + " you worked " + hoursWorked + " hours this week");
        System.out.println("Your pay rate is " + payRate + " per hour, your regular pay is " + regularPay + " for 40 Hours");
